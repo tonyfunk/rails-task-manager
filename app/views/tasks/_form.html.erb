@@ -1,0 +1,14 @@
+  <div class="mb-3 border-bottom py-3">
+    <%= form_with model: @task do |f| %>
+      <%= f.label :title, class: "form-label" %>
+      <%= f.text_field :title, class: "form-control" %>
+      <%= f.label :details, class: "form-label" %>
+      <%= f.text_area :details, class: "form-control" %>
+      <div class="py-3">
+      <%= f.check_box :completed, class: "form-check-input"%>
+      <%= f.label :completed, class: "form-check-label" %>
+      </div>
+      <%= f.submit class: "btn btn-primary" %>
+    <% end %>
+  </div>
+<%= link_to "Back to list", tasks_path %>
